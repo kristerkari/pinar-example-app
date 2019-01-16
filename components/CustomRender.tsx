@@ -1,3 +1,4 @@
+import Carousel from "pinar";
 import React from "react";
 import {
   AccessibilityInfo,
@@ -8,7 +9,6 @@ import {
   View,
   ViewStyle
 } from "react-native";
-import Carousel from "pinar";
 
 const styles = {
   slide1: {
@@ -58,7 +58,7 @@ const styles = {
 
 export const CustomRender = () => (
   <Carousel
-    renderNextButton={({ scrollToNext }) => (
+    renderNext={({ scrollToNext }) => (
       <TouchableOpacity
         accessibilityRole="button"
         onPress={scrollToNext}
@@ -67,7 +67,7 @@ export const CustomRender = () => (
         <Text style={styles.buttonText}>Next</Text>
       </TouchableOpacity>
     )}
-    renderPrevButton={({ scrollToPrev }) => (
+    renderPrev={({ scrollToPrev }) => (
       <TouchableOpacity
         accessibilityRole="button"
         onPress={scrollToPrev}
